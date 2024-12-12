@@ -1,8 +1,10 @@
 from django.urls import path
 from . import views
 
-app_name = 'main'  # here for namespacing of urls.
+#app_name = 'main'  # here for namespacing of urls.
 
 urlpatterns = [
-    path('', views.homepage, name='homepage'),
+    path('', views.index, name='index'),
+    path('register/', views.register, name='register'),
+
 ]

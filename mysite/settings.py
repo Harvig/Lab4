@@ -16,6 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -24,6 +25,8 @@ SECRET_KEY = 'django-insecure-5*v@7echh2$1eagv9!p21c$n6-&$5mpew_ti0-=$nsw9zo+o4c
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+LOGIN_REDIRECT_URL = '/'
 
 ALLOWED_HOSTS = []
 
@@ -55,7 +58,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["./templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
