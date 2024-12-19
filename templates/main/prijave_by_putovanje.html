@@ -1,0 +1,8 @@
+{% block content %}
+    <h2>Lista Prijava: </h2>
+    <ul>
+        {% for prijava in object_list %}
+            <li>Prijava: {{ prijava.prijava_brojOsoba }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% block content %}
+    <h2>Prijave</h2>
+    <ul>
+        {% for prijava in object_list %}
+            <li>
+                {% if prijava.putovanje %}
+                <a href="{% url 'putovanje_detail' prijava.putovanje.putovanje_sifraPutovanja %}">NazivPutovanja: {{ prijava.putovanje.putovanje_naslov }}</a><br>
+                {% else %}
+                    NazivPutovanja: No related Putovanje<br>
+                {% endif %}
+                VrstaAranzmana: {{ prijava.prijava_vrstaAranzmana }}<br>
+                BrojOsoba: {{ prijava.prijava_brojOsoba }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -12,6 +12,9 @@ class Putovanje(models.Model):
     putovanje_brojNocenja = models.IntegerField()
     putovanje_brojOsoba = models.IntegerField()
 
+    class Meta:
+        ordering = ['putovanje_naslov']
+
     def __str__(self):
         return self.putovanje_naslov
 
@@ -22,6 +25,9 @@ class Prijave(models.Model):
     prijava_vrstaAranzmana= models.CharField(max_length=100)
     prijava_brojOsoba = models.IntegerField()
 
+    class Meta:
+        ordering = ['-prijava_sifraPrijave']
+
     def __str__(self):
-        return self.prijava_sifraPrijave
+        return self.prijava_vrstaAranzmana
     

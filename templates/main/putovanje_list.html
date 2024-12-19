@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <h2>Putovanja</h2>
+    <ul>
+        {% for putovanje in object_list %}
+            <li>
+                Naziv: {{ putovanje.putovanje_naslov }}<br>
+                Opis: {{ putovanje.putovanje_opis }}<br>
+                Lokacija: {{ putovanje.putovanje_lokacija }}<br>
+                Drzava: {{ putovanje.putovanje_drzava }}<br>
+                Cijena: {{ putovanje.putovanje_cijena }}<br>
+                DatumPolaska: {{ putovanje.putovanje_datumPolaska }}<br>
+                BrojNocenja: {{ putovanje.putovanje_brojNocenja }}<br>
+                BrojOsoba: {{ publisher.putovanje_brojOsoba }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

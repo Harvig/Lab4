@@ -1,7 +1,11 @@
 from django.contrib import admin
 from .models import Putovanje
 from .models import Prijave
+from main.models import *
 
 ## Register your models here.
-admin.site.register(Putovanje)
-admin.site.register(Prijave)
+
+models_list = [Putovanje, Prijave]
+
+## Register your models here.
+admin.site.register(models_list)
