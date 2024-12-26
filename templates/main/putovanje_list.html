@@ -12,6 +12,16 @@
                 DatumPolaska: {{ putovanje.putovanje_datumPolaska }}<br>
                 BrojNocenja: {{ putovanje.putovanje_brojNocenja }}<br>
                 BrojOsoba: {{ publisher.putovanje_brojOsoba }}
+
+                <br><br>
+
+                <a href="{% url 'putovanje_detail' putovanje.putovanje_sifraPutovanja %}">Detalji</a>
+                <a href="{% url 'update_putovanje' pk=putovanje.pk %}">Uredi</a>
+                <form method="POST">           
+                    {% csrf_token %}
+                    <input type="hidden" name="object_id" value="{{ putovanje.putovanje_sifraPutovanja }}">
+                    <button type="submit">Izbriši</button>
+                </form>
             </li>
         {% endfor %}
     </ul>
